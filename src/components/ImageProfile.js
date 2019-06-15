@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component}                                               from 'react';
 import {ScrollView, Dimensions, Image, StyleSheet, Text, View, Linking} from 'react-native';
 
 class ImageProfile extends Component {
