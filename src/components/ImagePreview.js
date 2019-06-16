@@ -1,5 +1,6 @@
 import React, {Component}                                 from 'react';
 import {TouchableOpacity, StyleSheet, Image, View, Text}  from 'react-native';
+import ElevatedView                                       from 'react-native-elevated-view';
 
 class ImagePreview extends Component {
 
@@ -9,6 +10,7 @@ class ImagePreview extends Component {
 
   render() {
     return (
+      <ElevatedView elevation={3} style={styles.stayElevated}>
       <TouchableOpacity style={styles.imagePreviewContainer} key={this.props.photo.id} onPress={this.routeToImageProfile}>
         <View style={styles.container}>
           <Image
@@ -21,16 +23,15 @@ class ImagePreview extends Component {
           <Text key='inst'>Instagram @{this.props.photo.user.instagram_username}</Text>
         </View>
       </TouchableOpacity>
-    );
+    </ElevatedView>
+        );
   }
 }
 
 const styles = StyleSheet.create({
   imagePreviewContainer: {
-    marginHorizontal: 10,
     display: 'flex',
-    flexDirection: 'row',
-    elevation: 3
+    flexDirection: 'row'
   },
   container: {
     margin: 10,
@@ -41,6 +42,10 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 5
+  },
+  stayElevated: {
+    margin: 5,
+    backgroundColor: 'white'
   }
 });
 
