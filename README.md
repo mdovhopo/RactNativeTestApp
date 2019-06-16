@@ -46,6 +46,10 @@ cd android
 ./gradlew assembleRelease
 
 ```
+
+And go grab your .apk in `app/build/outputs/apk/release/` 
+
+
 ### IOS
 
 I haven't tested this app with ios because i don't have such a tools(
