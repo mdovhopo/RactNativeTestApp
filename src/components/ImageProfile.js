@@ -13,12 +13,13 @@ class ImageProfile extends Component {
     const screenWidth = Dimensions.get('window').width;
     const imageSize =  Math.round(screenWidth * 0.95);
     const redirectToInst = () => Linking.openURL(`instagram://user?username=${user.instagram_username}`).catch(err => console.log(err));
+    console.log(urls.small);
     return (
       <ScrollView>
         <ElevatedView elevation={5} style={styles.stayElevated}>
         <Image
           style={ {width: imageSize, height: imageSize, borderRadius: 8}}
-          source={{uri: urls.regular}}
+          source={{uri: urls.small}}
         />
         </ElevatedView>
           <View style={styles.container}>
